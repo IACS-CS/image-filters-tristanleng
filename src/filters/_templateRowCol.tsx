@@ -15,15 +15,16 @@ export const Border: Filter = {
       for (let col=0; col<width; col++) {
         const indices = getIndices(row,col); // indices is position of RED,GREEn,BLUE,ALPHA
         let redValue = pixels[indices[R]]
+       const borderwidth = width * 0.05
         // For example... take the top 175 rows
-        if (row < 175) {
+        if (row < borderwidth) {
           // and do something...
           pixels[indices[R]] = 0;
           pixels[indices[G]] = 0;
           pixels[indices[B]] = 0;
         
         }
-        if (col < 175){
+        if (col < borderwidth){ 
           pixels[indices[R]] = 0;
           pixels[indices[G]] = 0;
           pixels[indices[B]] = 0;
@@ -31,11 +32,16 @@ export const Border: Filter = {
         
         
         }
-        if (row < 175){
+        if (row > height - borderwidth){
           pixels[indices[R]] = 0;
           pixels[indices[G]] = 0;
           pixels[indices[B]] = 0;
         
+        }
+        if (col > width - borderwidth){
+          pixels[indices[R]] = 0;
+          pixels[indices[G]] = 0;
+          pixels[indices[B]] = 0;
         }
       }
     }
