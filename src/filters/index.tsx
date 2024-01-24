@@ -7,8 +7,8 @@ import { inverted } from "./invert";
 import { Border } from "./_templateRowCol";
 import { Blur } from "./blur";
 const filters: Filter[] = [
-  inverted,
   Blur,
+  inverted,
   Border,
   Brightner,
   sampleRoseColoredGlasses,
