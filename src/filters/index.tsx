@@ -1,11 +1,11 @@
 import type { Filter } from "../types";
-//import sampleRoseColoredGlasses from "./samples/roseColoredGlasses";
-//import sampleGrid from "./samples/grid";
-//import sampleVignette from "./samples/vignette";
+import sampleRoseColoredGlasses from "./samples/roseColoredGlasses";
+import sampleGrid from "./samples/grid";
+import sampleVignette from "./samples/vignette";
 import { Brightner } from "./brightned";
 import { inverted } from "./invert";
-import { Border } from "./_templateRowCol";
-//import { Blur } from "./blur";
+import { Border } from "./border";
+import { Blur } from "./blur";
 import { temperature } from "./temperature";
 
 const filters: Filter[] = [
@@ -14,9 +14,9 @@ const filters: Filter[] = [
   inverted,
   Border,
   Brightner,
-  sampleRoseColoredGlasses,
+ // sampleRoseColoredGlasses,
   //sampleGrid,
-  sampleVignette,
+ // sampleVignette,
 ];
 
 export default filters;
