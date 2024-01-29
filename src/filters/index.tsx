@@ -6,8 +6,11 @@ import { Brightner } from "./brightned";
 import { inverted } from "./invert";
 import { Border } from "./_templateRowCol";
 import { Blur } from "./blur";
+import { temperature } from "./temperature";
+
 const filters: Filter[] = [
   Blur,
+  temperature,
   inverted,
   Border,
   Brightner,
