@@ -2,7 +2,7 @@ import type { Filter } from "../types";
 
 type MyFilterOptions = {
   
-  strength: string;
+  strength: number;
   
 };
 export const temperature: Filter<MyFilterOptions> = {
